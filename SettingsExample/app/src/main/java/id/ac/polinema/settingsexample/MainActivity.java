@@ -1,5 +1,7 @@
 package id.ac.polinema.settingsexample;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity
     implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView navigationView;
+    Context context = getActivity();
+    SharedPreferences pref = context.getSharedPreferences("nama pref", Context.MODE_PRIVATE);
+    SharedPreferences pref = getActivity().getPreferences(Context.MODE_PRIVATE);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
